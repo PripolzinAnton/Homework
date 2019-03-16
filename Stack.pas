@@ -24,7 +24,7 @@ begin
   Nhead := TNode;
 end;
 
-procedure CreatorDeleteStack ();//создание пустогос стека или очищение 
+procedure CreatorDeleteStack ();//создание пустого стека или очищение 
 begin
   NHead := nil;
 end;

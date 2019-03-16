@@ -91,7 +91,7 @@ begin
   begin
     if n > R - 1 then 
     begin
-      if flagInt + R - 1 = n then flagInt := flagInt + R - 1 //здесь если последний элемент в списке, то не нужно делать остаток от деления
+      if (flagInt + R - 1) mod n = 0 then flagInt := n //здесь если последний элемент в списке, то не нужно делать остаток от деления
       else
         flagInt := (flagInt + R - 1) mod n; //ищем какой новый будем удалять
     end;
@@ -101,8 +101,11 @@ begin
       if flagInt > n then //если выход за пределы количества
         flagInt := flagInt - n; 
     end;
+    writeln(flagint);
     temp := find(flagInt);
     delete(temp);
+    WriteList();
+    writeln();
     n := n - 1;
   end;
 end;
